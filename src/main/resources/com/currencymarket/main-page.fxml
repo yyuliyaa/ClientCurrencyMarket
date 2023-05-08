@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymarket.controller.mainpage.MainPageController">
+   <top>
+      <AnchorPane prefHeight="80.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exit" layoutX="1400.0" mnemonicParsing="false" onAction="#exitAction" prefHeight="50.0" prefWidth="140.0" styleClass="btn" text="Выход" />
+            <Button fx:id="admin" layoutX="980.0" mnemonicParsing="false" onAction="#adminButton" prefHeight="50.0" prefWidth="140.0" styleClass="btn" text="Панель админа" />
+            <Button layoutX="280.0" mnemonicParsing="false" onAction="#marketButton" prefHeight="50.0" prefWidth="140.0" styleClass="btn" text="Биржа" />
+            <Button mnemonicParsing="false" onAction="#home" prefHeight="50.0" prefWidth="140.0" styleClass="btn" stylesheets="@styles/style.css" text="Главная" />
+            <Button layoutX="1260.0" mnemonicParsing="false" onAction="#chat" prefHeight="50.0" prefWidth="140.0" styleClass="btn" text="Чат" textFill="#5b2222">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="140.0" mnemonicParsing="false" onAction="#wallet" prefHeight="50.0" prefWidth="140.0" styleClass="btn" text="Кошелек" />
+            <Button layoutX="1120.0" mnemonicParsing="false" onAction="#createCardButton" prefHeight="50.0" prefWidth="140.0" styleClass="btn" text="Привязать карту" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="750.0" prefWidth="160.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox fx:id="wrapper" prefHeight="750.0" prefWidth="880.0" BorderPane.alignment="CENTER" />
+   </center>
+   <padding>
+      <Insets top="1.0" />
+   </padding>
+   <right>
+      <AnchorPane prefHeight="750.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

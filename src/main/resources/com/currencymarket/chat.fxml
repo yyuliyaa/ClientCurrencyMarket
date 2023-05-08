@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1217.0" style="-fx-background-color: #438e94;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymarket.controller.mainpage.Chat">
+   <children>
+      <TableView fx:id="chatTable" layoutX="129.0" layoutY="40.0" prefHeight="505.0" prefWidth="960.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="194.4000244140625" text="Имя" />
+          <TableColumn fx:id="colMessage" prefWidth="455.20001220703125" text="Смс" />
+            <TableColumn fx:id="colTime" prefWidth="308.79998779296875" text="Время" />
+        </columns>
+      </TableView>
+      <TextField fx:id="messageField" layoutX="360.0" layoutY="588.0" prefHeight="26.0" prefWidth="497.0" />
+      <Button fx:id="sendButton" layoutX="129.0" layoutY="588.0" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="26.0" prefWidth="177.0" text="Отправить" />
+      <Button fx:id="sendButton1" layoutX="910.0" layoutY="588.0" mnemonicParsing="false" onAction="#getMessageButton" prefHeight="26.0" prefWidth="178.0" text="Получить" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="670.0" prefWidth="1217.0" style="-fx-background-color: #438e94;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymarket.controller.market.Market">
+   <children>
+      <TableView fx:id="marketTable" layoutX="56.0" layoutY="7.0" onMouseClicked="#getAllTransactionForCompany" prefHeight="342.0" prefWidth="230.0">
+        <columns>
+          <TableColumn fx:id="colCompanyNameMarketTable" prefWidth="75.0" text="Монета" />
+          <TableColumn fx:id="colCompanyPrice" prefWidth="75.0" text="Цена" />
+            <TableColumn fx:id="colChanging" prefWidth="75.0" text="Изменение" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="ChartWrapper" layoutX="294.0" layoutY="3.0" />
+      <Button layoutX="532.0" layoutY="633.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="20.0" prefWidth="200.0" text="Обновить">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <TableView fx:id="byuSellTable" layoutX="56.0" layoutY="400.0" onMouseClicked="#clickBuySellButton" prefHeight="200.0" prefWidth="475.0">
+        <columns>
+          <TableColumn fx:id="colCompanyName" prefWidth="75.0" text="Монета" />
+          <TableColumn fx:id="colCounterOfStock" prefWidth="136.0" text="Количество акций" />
+            <TableColumn fx:id="colPriceOfStock" prefWidth="88.0" text="Стоимость" />
+            <TableColumn fx:id="colBuySell" prefWidth="173.59991455078125" text="Продажа/ Покупка" />
+        </columns>
+      </TableView>
+      <TableView fx:id="historyMarketTable" layoutX="808.0" layoutY="7.0" prefHeight="342.0" prefWidth="349.0">
+         <columns>
+            <TableColumn fx:id="colBuySellHistoryTable" prefWidth="75.0" text="Цена" />
+            <TableColumn fx:id="colCounterOfBuySell" prefWidth="75.0" text="Сумма" />
+            <TableColumn fx:id="colStatus" prefWidth="75.0" text="Статус" />
+            <TableColumn fx:id="colTime" prefWidth="123.19997558593752" text="Время" />
+         </columns>
+      </TableView>
+      <Button layoutX="956.0" layoutY="633.0" mnemonicParsing="false" onAction="#sellButton" prefHeight="20.0" prefWidth="200.0" text="Продать">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font></Button>
+      <TableView fx:id="activeTable" layoutX="609.0" layoutY="400.0" onMouseClicked="#click" prefHeight="200.0" prefWidth="302.0">
+         <columns>
+            <TableColumn fx:id="colCompanyNameActive" prefWidth="75.0" text="Монета" />
+            <TableColumn fx:id="colCounterOfStockActive" prefWidth="136.0" text="Количество акций" />
+            <TableColumn fx:id="colPercentOfCompanyStock" prefWidth="88.0" text="Доля акций" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="233.0" layoutY="368.0" prefHeight="18.0" prefWidth="121.0" text="Биржа">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="699.0" layoutY="368.0" prefHeight="18.0" prefWidth="121.0" text="Мои активы">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Button layoutX="56.0" layoutY="634.0" mnemonicParsing="false" onAction="#buyButton" prefHeight="20.0" prefWidth="200.0" text="Купить">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font></Button>
+      <TextField fx:id="fieldPrice" layoutX="1063.0" layoutY="500.0" prefHeight="26.0" prefWidth="94.0" />
+      <Label layoutX="956.0" layoutY="502.0" prefHeight="18.0" prefWidth="53.0" text="Цена:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="fieldCounter" layoutX="1063.0" layoutY="537.0" prefHeight="26.0" prefWidth="94.0" />
+      <Label layoutX="956.0" layoutY="539.0" prefHeight="22.0" prefWidth="94.0" text="Количество:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="fieldCompany" editable="false" layoutX="1063.0" layoutY="464.0" prefHeight="26.0" prefWidth="94.0" />
+      <Label layoutX="956.0" layoutY="466.0" prefHeight="22.0" prefWidth="94.0" text="Монета:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

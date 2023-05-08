@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymarket.controller.auth.SignUpController">
+    <children>
+        <AnchorPane prefHeight="900.0" prefWidth="400.0" style="-fx-background-color: #002137;">
+            <children>
+                <Label alignment="TOP_CENTER" layoutX="57.0" layoutY="424.0" prefHeight="51.0" prefWidth="257.0" text="Регистрация" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="35.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="900.0" prefWidth="1254.0">
+            <children>
+            <Button fx:id="signUpButton" layoutX="549.0" layoutY="507.0" mnemonicParsing="false" onAction="#signUpButtonAction" prefHeight="40.0" prefWidth="194.0" text="Зарегистрироваться" textAlignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Button>
+                <Label alignment="TOP_CENTER" layoutX="373.0" layoutY="372.0" prefHeight="40.0" prefWidth="140.0" text="Пароль" textFill="#2b00ff">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_CENTER" layoutX="398.0" layoutY="277.0" prefHeight="26.0" prefWidth="90.0" text="Логин" textFill="#001ddc">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" layoutX="541.0" layoutY="277.0" prefHeight="40.0" prefWidth="210.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+                <Button fx:id="loginButton" layoutX="703.0" layoutY="605.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Войти">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Button>
+                <Label alignment="TOP_CENTER" layoutX="481.0" layoutY="608.0" text="Есть аккаунт?" textFill="#2b00ff">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            <PasswordField fx:id="passwordField" layoutX="541.0" layoutY="372.0" prefHeight="40.0" prefWidth="210.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </PasswordField>
+            </children>
+        </AnchorPane>
+    </children>
+</HBox>

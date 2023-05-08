@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1217.0" style="-fx-background-color: #438e94;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymarket.controller.mainpage.Wallet">
+   <children>
+      <Button layoutX="880.0" layoutY="542.0" mnemonicParsing="false" onAction="#updateBalance" prefHeight="36.0" prefWidth="187.0" text="Пополнить баланс">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label fx:id="balance" layoutX="262.0" layoutY="75.0" prefHeight="51.0" prefWidth="162.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="75.0" prefHeight="51.0" prefWidth="110.0" text="Баланс:" textFill="#fcfcfc">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="sumField" layoutX="345.0" layoutY="545.0" prefHeight="14.0" prefWidth="158.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="533.0" prefHeight="54.0" prefWidth="162.0" text="Введите сумму:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="479.0" layoutY="26.0" prefHeight="30.0" prefWidth="260.0" text="Портфель активов" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></Label>
+      <TableView fx:id="bagTable" layoutX="157.0" layoutY="166.0" prefHeight="310.0" prefWidth="910.0">
+        <columns>
+          <TableColumn fx:id="colCompany" prefWidth="246.4000244140625" text="Компания" />
+          <TableColumn fx:id="colCounterOfStocks" prefWidth="353.5999450683594" text="Количество акций" />
+            <TableColumn fx:id="colPersentOfCompanyAssets" prefWidth="310.4000244140625" text="Доля акций компании" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

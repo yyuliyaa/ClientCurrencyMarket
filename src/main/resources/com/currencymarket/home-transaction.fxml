@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymarket.controller.home.HomeTransaction">
+   <children>
+      <VBox layoutX="24.0" layoutY="21.0" prefHeight="472.0" prefWidth="756.0">
+         <children>
+            <TableView fx:id="transactionTable" prefHeight="470.0" prefWidth="756.0">
+              <columns>
+                <TableColumn fx:id="col_date" prefWidth="140.0" text="Дата" />
+                <TableColumn fx:id="col_company" prefWidth="105.60003662109375" text="Компания" />
+                  <TableColumn fx:id="col_type" minWidth="0.0" prefWidth="109.5999755859375" text="Тип" />
+                  <TableColumn fx:id="col_price" minWidth="0.0" prefWidth="129.60003662109375" text="Цена" />
+                  <TableColumn fx:id="col_amount" prefWidth="124.0" text="Количество" />
+                  <TableColumn fx:id="col_result" prefWidth="146.39996337890625" text="Итого" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="reportButton" layoutX="307.0" layoutY="506.0" mnemonicParsing="false" onAction="#reportButton" prefHeight="26.0" prefWidth="186.0" text="Отчет">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

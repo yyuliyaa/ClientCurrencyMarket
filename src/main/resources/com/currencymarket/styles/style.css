@@ -1,0 +1,17 @@
+.navBtn {
+    -fx-background-color: FFDD55;
+}
+
+.navBtn:hover {
+    -fx-background-color: rgba(255, 250, 170, 0.3);
+    -fx-cursor: hand;
+}
+
+.btn {
+    -fx-background-color: FFDD55;
+}
+
+.btn:hover {
+    -fx-background-color: rgba(255, 204, 0, 0.8);
+    -fx-cursor: hand;
+}

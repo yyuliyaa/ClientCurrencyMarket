@@ -1,12 +1,9 @@
 package com.currencymarket.controller.mainpage;
 
 import com.currencymarket.alert.AlertBox;
-import com.currencymarket.command.MoneyType;
-import com.currencymarket.dto.StockPortfolio;
-import com.currencymarket.dto.admindto.ClientInformationDto;
+import com.currencymarket.dto.clientdto.StockPortfolio;
 import com.currencymarket.dto.carddto.CardDto;
 import com.currencymarket.dto.clientdto.UpdateCashDto;
-import com.currencymarket.entity.Company;
 import com.currencymarket.state.State;
 import com.currencymarket.utils.DBUtils;
 import javafx.collections.FXCollections;
@@ -19,7 +16,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Wallet implements Initializable {
     private ObservableList<StockPortfolio> tableData = FXCollections.observableArrayList();

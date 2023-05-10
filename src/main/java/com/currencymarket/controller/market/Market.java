@@ -2,8 +2,7 @@ package com.currencymarket.controller.market;
 
 import com.currencymarket.alert.AlertBox;
 import com.currencymarket.dto.ChartDto;
-import com.currencymarket.dto.StockPortfolio;
-import com.currencymarket.dto.clientdto.AssetDto;
+import com.currencymarket.dto.clientdto.StockPortfolio;
 import com.currencymarket.dto.companydto.CompanyMarketStatus;
 import com.currencymarket.dto.transactiondto.BuySellDto;
 import com.currencymarket.dto.transactiondto.HistoryDto;

@@ -31,11 +31,12 @@ module com.currencymarket.courseproject {
     opens com.currencymarket.controller.auth to javafx.fxml;
     exports com.currencymarket.controller.market;
     opens com.currencymarket.controller.market to javafx.fxml;
-    opens com.currencymarket.dto.clientdto to javafx.base;
     exports com.currencymarket.dto.transactiondto;
     opens com.currencymarket.dto.transactiondto to javafx.base, javafx.fxml;
     opens com.currencymarket.entity to javafx.base;
     exports com.currencymarket.controller.card to  javafx.fxml;
     opens com.currencymarket.controller.card to  javafx.fxml;
+    exports com.currencymarket.dto.clientdto;
+    opens com.currencymarket.dto.clientdto to javafx.base, javafx.fxml;
 
 }

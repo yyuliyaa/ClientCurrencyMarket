@@ -44,9 +44,9 @@
          </font></Button>
       <TableView fx:id="activeTable" layoutX="609.0" layoutY="400.0" onMouseClicked="#click" prefHeight="200.0" prefWidth="302.0">
          <columns>
-            <TableColumn fx:id="colCompanyNameActive" prefWidth="75.0" text="Монета" />
-            <TableColumn fx:id="colCounterOfStockActive" prefWidth="136.0" text="Количество акций" />
-            <TableColumn fx:id="colPercentOfCompanyStock" prefWidth="88.0" text="Доля акций" />
+            <TableColumn fx:id="colCompanyNameActive" prefWidth="152.00006103515625" text="Монета" />
+            <TableColumn fx:id="colCounterOfStockActive" prefWidth="147.99993896484375" text="Количество акций" />
+            <TableColumn fx:id="colPercentOfCompanyStock" minWidth="0.0" prefWidth="0.0" text="Доля акций" />
          </columns>
       </TableView>
       <Label alignment="CENTER" layoutX="233.0" layoutY="368.0" prefHeight="18.0" prefWidth="121.0" text="Биржа">

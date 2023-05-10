@@ -10,10 +10,7 @@ import com.currencymarket.dto.admindto.ClientInformationDto;
 import com.currencymarket.dto.admindto.CompanyRequestStatus;
 import com.currencymarket.dto.carddto.CardDto;
 import com.currencymarket.dto.chatdto.MessageDto;
-import com.currencymarket.dto.clientdto.AssetDto;
-import com.currencymarket.dto.clientdto.ChangePasswordDto;
-import com.currencymarket.dto.clientdto.HomePageDto;
-import com.currencymarket.dto.clientdto.UpdateCashDto;
+import com.currencymarket.dto.clientdto.*;
 import com.currencymarket.dto.companydto.CompanyMarketStatus;
 import com.currencymarket.dto.companydto.CreateCompanyDto;
 import com.currencymarket.dto.companydto.CurrentCompanyStatusDto;
@@ -21,7 +18,6 @@ import com.currencymarket.dto.transactiondto.BuySellDto;
 import com.currencymarket.dto.transactiondto.HistoryDto;
 import com.currencymarket.entity.Company;
 import com.currencymarket.entity.Transaction;
-import com.currencymarket.entity.Wallet;
 import com.currencymarket.state.State;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -233,12 +229,12 @@ public class DBUtils {
     }
 
     public static List<StockPortfolio> getWalletOfAssets(int id) {
-        clientServerConnection.writeObject(ClientAction.GET_WALLET_LIST);
+        clientServerConnection.writeObject(ClientAction.GET_ASSETS);
         clientServerConnection.writeObject(id);
-        List<Wallet> walletList = (List<Wallet>) clientServerConnection.readObject();
-        List<Company> companyList = State.companyList;
+//        List<Wallet> walletList = (List<Wallet>) clientServerConnection.readObject();
+//        List<Company> companyList = State.companyList;
 
-        List<StockPortfolio> portfolioList = getPortfolioList(companyList, walletList);
+        List<StockPortfolio> portfolioList =  (List<StockPortfolio>) clientServerConnection.readObject();
 
         return portfolioList;
     }
@@ -251,13 +247,13 @@ public class DBUtils {
                 StockPortfolio stockPortfolio = new StockPortfolio();
                 if (company.getCompanyName().equals(wallet.getCompanyName())) {
                     stockPortfolio.setCompanyName(company.getCompanyName());
-                    stockPortfolio.setCounterOfStocks(wallet.getCounterOfStocks());
-                    stockPortfolio.setPercentAssetsOfCompany(wallet.getCounterOfStocks() * 100 / company.getCounterOfStocks());
+                    stockPortfolio.setCounterOfStocks(Double.valueOf(wallet.getCounterOfStocks()));
+//                    stockPortfolio.setPercentAssetsOfCompany(wallet.getCounterOfStocks() * 100 / company.getCounterOfStocks());
                     stockPortfolioList.add(stockPortfolio);
                 } else {
                     stockPortfolio.setCompanyName(company.getCompanyName());
-                    stockPortfolio.setCounterOfStocks(0);
-                    stockPortfolio.setPercentAssetsOfCompany(0);
+                    stockPortfolio.setCounterOfStocks(0.0);
+//                    stockPortfolio.setPercentAssetsOfCompany(0);
                     stockPortfolioList.add(stockPortfolio);
 
                 }
